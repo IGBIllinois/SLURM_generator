@@ -88,7 +88,7 @@
 							<div class="col-sm-8">
 								<select id='modules' multiple class='select2_dropdown form-control' onchange="generateScript();">
 									<?php
-										$lines = preg_split('/ +/',file_get_contents('http://biocluster.igb.illinois.edu/apps.txt'));
+										$lines = preg_split('/ +/',file_get_contents('http://biocluster2.igb.illinois.edu/apps.txt'));
 										$software = array();
 									    foreach($lines as $line){
 									        $line = trim($line);
@@ -100,7 +100,7 @@
 									    sort($software);
 									    
 									    foreach( $software as $module){
-									        if(! (preg_match('/modules|^-|^ -/',$module)) ){
+									        if(! (preg_match('/modules|^-|^ -|\/$/',$module)) ){
 												echo "<option value='{$module}' >{$module}</option>";
 									        }
 									    }
