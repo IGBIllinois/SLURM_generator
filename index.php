@@ -221,7 +221,7 @@
 			var memory = $('#memory').val();
 			var nodes = $('#nodes').val();
 			
-			var cpuStr = "#SBATCH -c "+cpu+"\n";
+			var cpuStr = "#SBATCH -n "+cpu+"\n";
 			var memStr = "#SBATCH --mem="+memory+"g\n";
 			var nodesStr = "#SBATCH -N "+nodes+"\n";
 			
