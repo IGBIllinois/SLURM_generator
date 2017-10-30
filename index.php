@@ -32,16 +32,20 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<legend>Available Queues</legend>
+				<table class="table table-bordered table-condensed">
+					<tr><th>Queue Name</th><th>CPUs</th><th>Memory</th><th>Nodes</th><th>GPUs</th></tr>
 				<?php
 					foreach($config['queues'] as $queue){
-						echo '<table class="table table-bordered table-condensed queue_table">';
-						echo '<tr><th>Queue Name</th><td>'.$queue['name'].'</td></tr>';
-						echo '<tr><th>CPUs/node</th><td>'.$queue['cpu'].'</td></tr>';
-						echo '<tr><th>Memory/node (GB)</th><td>'.$queue['memory'].'</td></tr>';
-						echo '<tr><th>Nodes</th><td>'.$queue['nodes'].'</td></tr>';
-						echo '</table>';
+						echo '<tr>';
+						echo '<td>'.$queue['name'].'</td>';
+						echo '<td>'.$queue['cpu'].'</td>';
+						echo '<td>'.$queue['memory'].'</td>';
+						echo '<td>'.$queue['nodes'].'</td>';
+						echo '<td>'; if(isset($queue['gpu'])){ echo $queue['gpu']; } echo '</td>';
+						echo '</tr>';
 					}
 				?>
+				</table>
 			</div>
 		</div>
 		<div class="row">
@@ -77,6 +81,13 @@
 							<label class="col-sm-4">Nodes</label>
 							<div class="col-sm-8">
 								<select id="nodes" class="form-control select2_dropdown" onchange="generateScript();">
+								</select>
+							</div>
+						</div>
+						<div class="form-group" id='gpu-group'>
+							<label class="col-sm-4">GPUs</label>
+							<div class="col-sm-8">
+								<select id="gpu" class="form-control select2_dropdown" onchange="generateScript();">
 								</select>
 							</div>
 						</div>
@@ -205,6 +216,18 @@
 					for(var j=1;j<=config.queues[i].nodes;j++){
 						$nodes.append('<option value="'+j+'">'+j+'</option>');
 					}
+					
+					var $gpugroup = $('#gpu-group');
+					if(config.queues[i].hasOwnProperty('gpu')){
+						var $gpus = $('#gpu');
+						$gpus.empty();
+						for(var j=1; j<=config.queues[i].gpu; j++){
+							$gpus.append('<option value="'+j+'">'+j+'</option>');
+						}
+						$gpugroup.css('display','block');
+					} else {
+						$gpugroup.css('display', 'none');
+					}
 				}
 			}
 			generateScript();
@@ -220,10 +243,14 @@
 			var cpu = $('#cpu').val();
 			var memory = $('#memory').val();
 			var nodes = $('#nodes').val();
+			var gpu = null;
+			if($('#gpu-group').css('display') == 'block'){ gpu = $('#gpu').val(); }
 			
 			var cpuStr = "#SBATCH -n "+cpu+"\n";
 			var memStr = "#SBATCH --mem="+memory+"g\n";
 			var nodesStr = "#SBATCH -N "+nodes+"\n";
+			var gpuStr = "";
+			if(gpu != null){ gpuStr = "#SBATCH --gres=gpu:"+gpu+"\n"; }
 			
 			// Grab modules
 			var modules = $('#modules').select2('val');
@@ -263,6 +290,7 @@
 			queueStr+
 			cpuStr+
 			memStr+
+			gpuStr+
 			nodesStr+
 			emailStr+
 			jobnameStr+
