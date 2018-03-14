@@ -143,7 +143,7 @@
 						<div class="form-group">
 							<label class="col-sm-4">Working directory</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" name="workingdir" id="workingdir" onkeyup="generateScript();"/>
+								<input type="text" class="form-control" name="workingdir" id="workingdir" onkeyup="generateScript();" placeholder="/full/path/to/directory/"/>
 							</div>
 						</div>
 					</fieldset>
