@@ -269,7 +269,7 @@
 			var jobname = $('#jobname').val();
 			var workingdir = $('#workingdir').val();
 			
-			var emailStr = email==""?"":"#SBATCH --mail-user="+email+"\n";
+			var emailStr = email==""?"":"#SBATCH --mail-user="+email+"\n#SBATCH --mail-type=ALL\n";
 			var jobnameStr = jobname==""?"":"#SBATCH -J "+jobname+"\n";
 			var workingdirStr = workingdir==""?"":"#SBATCH -D "+workingdir+"\n";
 			
