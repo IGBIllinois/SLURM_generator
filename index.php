@@ -6,16 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 	<title>IGB SLURM Script Generator</title><!-- Bootstrap -->
-	<link href="includes/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link href="includes/css/select2.min.css" rel="stylesheet" type="text/css">
+
+	<script src="vendor/components/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="vendor/select2/select2/dist/js/select2.min.js" type="text/javascript"></script>
+
+	<link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="vendor/select2/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
 	<link href="includes/css/select2-bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="includes/css/main.inc.css" rel="stylesheet" type="text/css">
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+
 </head>
 
 <body>
@@ -182,10 +182,7 @@
 	</div>
 	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="includes/js/bootstrap.min.js"></script>
-	<script src="includes/js/select2.min.js"></script>
 	<script type="text/javascript">
 		$.fn.select2.defaults.set( "theme", "bootstrap" );
 		$.fn.select2.defaults.set( "width", null );
