@@ -13,7 +13,7 @@
 
 	<link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="vendor/select2/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
-	<link href="includes/css/select2-bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="vendor/intelogie/select2-bootstrap-theme/dist/select2-bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="includes/css/main.inc.css" rel="stylesheet" type="text/css">
 
 </head>

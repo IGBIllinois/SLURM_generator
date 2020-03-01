@@ -3,7 +3,8 @@
 		"php": ">=5.4",
 		"components/jquery": "1.12.4",
 		"twbs/bootstrap": "3.4.1",
-		"select2/select2": "4.0.13"
+		"select2/select2": "4.0.13",
+		"intelogie/select2-bootstrap-theme": "dev-master"
 	}
 }
 
