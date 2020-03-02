@@ -1,6 +1,6 @@
 {
 	"require": {
-		"php": ">=5.4",
+		"php": ">=5.3",
 		"components/jquery": "1.12.4",
 		"twbs/bootstrap": "3.4.1",
 		"select2/select2": "4.0.13",
