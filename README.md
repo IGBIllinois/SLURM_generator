@@ -12,7 +12,20 @@ git clone https://github.com/IGBIllinois/SLURM_generator.git
 ```
 cp includes/config.json.dist includes/config.json
 ```
-* Edit includes/config.json for your cluster specifications.  
+## Configuration
+* Edit includes/config.json for the page title and location of apps.txt
+```
+"config": {
+	"title": "Slurm Script Generator",
+	"apps_url": "http://localhost/apps.txt"
+},
+```
+* The apps.txt can be generated for Lmod with the following command
+```
+module -t avail > /var/www/html/apps.txt
+```
+* Edit the queueus for your cluster specifications
+ 
 ```
 		{
                         "name": "normal",

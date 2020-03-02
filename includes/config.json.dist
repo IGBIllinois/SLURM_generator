@@ -1,4 +1,8 @@
 {
+	"config": {
+		"title": "Slurm Script Generator",
+		"apps_url": "http://localhost/apps.txt"
+	},
 	"queues": [
 		{
 			"name": "",
