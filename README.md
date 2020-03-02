@@ -27,10 +27,10 @@ module -t avail > /var/www/html/apps.txt
 * Edit the queueus for your cluster specifications
  
 ```
-		{
-                        "name": "normal",
-                        "cpu": 24,
-                        "memory": 384,
-                        "nodes": 10
-                },
+{
+	"name": "normal",
+	"cpu": 24,
+	"memory": 384,
+	"nodes": 10
+},
 ```
