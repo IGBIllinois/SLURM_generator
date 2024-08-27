@@ -8,7 +8,7 @@ This tool helps users generate SLURM batch scripts for the Carl R. Woese Institu
 ```
 git clone https://github.com/IGBIllinois/SLURM_generator.git
 ```
-* Install depdencies with composer
+* Install dependencies with composer.  If you do not have composer already installed, they have installation instructions at [https://getcomposer.org/ https://getcomposer.org/]
 ```
 composer install
 ```
