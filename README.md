@@ -8,6 +8,10 @@ This tool helps users generate SLURM batch scripts for the Carl R. Woese Institu
 ```
 git clone https://github.com/IGBIllinois/SLURM_generator.git
 ```
+* Install depdencies with composer
+```
+composer install
+```
 * Copy includes/config.json.dist to includes/config.json
 ```
 cp includes/config.json.dist includes/config.json
