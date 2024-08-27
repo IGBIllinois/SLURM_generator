@@ -1,4 +1,7 @@
 {
+	"name": "igbillinois/SLURM_generator",
+	"description": "A web interface to generate SLURM job scripts for HPC Clusters",
+	"license": "GPL-3.0-only",
 	"require": {
 		"php": ">=5.3",
 		"ext-curl": "*",
