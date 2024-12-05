@@ -96,12 +96,14 @@
 							</div>
 						</div>
 						&nbsp;
-						<div class="row" id='gpu-group'>
+						<div id='gpu-group'>
+						<div class="row">
 							<label class="col-sm-4">GPUs</label>
 							<div class="col-sm-8">
 								<select id="gpu" class="form-select select2_dropdown" onchange="generateScript();">
 								</select>
 							</div>
+						</div>
 						</div>
 					</fieldset>
 					&nbsp;
