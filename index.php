@@ -39,7 +39,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<legend>Available Queues</legend>
-				<table class="table table-bordered table-condensed">
+				<table class="table table-bordered table-sm">
 					<tr><th>Queue Name</th><th>CPUs</th><th>Memory</th><th>Nodes</th><th>GPUs</th></tr>
 				<?php
 					foreach($config['queues'] as $queue){
